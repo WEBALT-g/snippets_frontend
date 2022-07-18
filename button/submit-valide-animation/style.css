@@ -1,0 +1,61 @@
+/* IBM Plex Mono */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: "IBM PLex Mono", monospace;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #01161e;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.submit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: width .5s, border-radius .5s;
+}
+
+.button * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.icon {
+    opacity: 0;
+}
+
+.button:focus {
+    width: 60px;
+    background-color: #44C08A;
+    border-radius: 50%;
+}
+
+.button:focus .text {
+    opacity: 0;
+}
+
+.button:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
+}
