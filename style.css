@@ -16,10 +16,12 @@ body {
 }
 
 a {
+  display: flex;
   color: #d45113;
 }
 
 .typewriter h1 {
+  max-width: 300px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   font-size: 14px;
   border-right: 0.15em solid #d45113; /* The typwriter cursor */
