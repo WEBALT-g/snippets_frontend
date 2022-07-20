@@ -90,5 +90,7 @@ body {
     &:disabled {
         background-color: $line-border-empty;
         cursor: not-allowed;
+        color: #01161e;
+        transition: 0.6s ease;
     }
 }
