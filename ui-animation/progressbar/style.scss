@@ -29,7 +29,7 @@ body {
         margin-bottom: 30px;
         max-width: 100%;
         width: 350px;
-        ::before {
+        &::before {
             content: "";
             background-color: $line-border-empty;
             position: absolute;
@@ -66,8 +66,8 @@ body {
     justify-content: center;
     border: 3px solid $line-border-empty;
     transition: 0.4s ease;
-    .active {
-        border-color: $line-border-fill;
+    &.active {
+        border: 3px solid $line-border-fill;
     }
 }
 
@@ -81,13 +81,13 @@ body {
     padding: 8px 30px;
     margin: 5px;
     font-size: 14px;
-    :active {
+    &:active {
         transform: scale(0.98);
     }
-    :focus {
+    &:focus {
         outline: 0;
     }
-    :disabled {
+    &:disabled {
         background-color: $line-border-empty;
         cursor: not-allowed;
     }
