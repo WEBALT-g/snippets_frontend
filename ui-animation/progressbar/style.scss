@@ -1,0 +1,94 @@
+/* IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+$line-border-fill: #d45113;
+$line-border-empty: #e0e0e0;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background-color: #01161e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 30px;
+        max-width: 100%;
+        width: 350px;
+        ::before {
+            content: "";
+            background-color: $line-border-empty;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 99%;
+            z-index: -1;
+        }
+    }
+}
+
+.progress {
+    background-color: $line-border-fill;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: #fff;
+    color: #01161e;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $line-border-empty;
+    transition: 0.4s ease;
+    .active {
+        border-color: $line-border-fill;
+    }
+}
+
+.btn {
+    background-color: $line-border-fill;
+    color: #fff;
+    font-family: 'IBM Plex Mono', sans-serif;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    :active {
+        transform: scale(0.98);
+    }
+    :focus {
+        outline: 0;
+    }
+    :disabled {
+        background-color: $line-border-empty;
+        cursor: not-allowed;
+    }
+}
