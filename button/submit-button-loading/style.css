@@ -18,11 +18,11 @@ body, button {
     font: 1em/1.5 Nunito, sans-serif;
 }
 body {
-    background-color: var(--bg1);
-    color: var(--fg1);
     height: 100vh;
-    display: grid;
-    place-items: center;
+    background-color: #01161e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Main button styles */
 .btn {
