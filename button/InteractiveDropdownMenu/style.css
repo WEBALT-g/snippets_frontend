@@ -1,0 +1,102 @@
+/* IBM Plex Mono */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM PLex Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  background-color: #01161e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style */
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  width: 200px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+}
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.dropdown {
+  position: absolute;
+  width: 200px;
+  color: #000;
+}
+.dropdown li {
+  display: none;
+  opacity: 0;
+  background-color: #fff;
+  transition: color 0.3s;
+}
+.dropdown li:hover {
+  color: #d45113;
+  background: #faf8f4;
+}
+
+.dropdown-menu:hover .dropdown li {
+  display: block;
+  -webkit-animation: menu1 0.5s forwards;
+          animation: menu1 0.5s forwards;
+}
+
+@-webkit-keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.dropdown-menu .dropdown li:nth-last-child(1) {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.dropdown-menu:hover .dropdown li {
+  -webkit-animation: animation 0.5s forwards;
+          animation: animation 0.5s forwards;
+}
+.dropdown-menu:hover .dropdown li:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.dropdown-menu:hover .dropdown li:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}/*# sourceMappingURL=style.css.map */
