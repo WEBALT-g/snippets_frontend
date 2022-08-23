@@ -1,0 +1,78 @@
+/* IBM Plex Mono */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: "IBM PLex Mono", monospace;
+}
+/* RESET CSS */ 
+body {
+    background: #01161e;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+
+/*=====================*/
+.wrapper {
+    position: relative;
+    padding-right: 40px;
+}
+.wrapper :is(.btn, .link) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #151515;
+    border-radius: 50%;
+    left: 40px;
+    top: 16px;
+}
+.btn {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: outline .25s;
+}
+.active .btn,
+.btn:hover {
+    outline: 5px solid #d45113;
+    outline-offset: -4px;
+}
+.item {
+    position: absolute;
+    list-style: none;
+    transition: transform .5s;
+    transition-delay: var(--d);
+    
+}
+.wrapper.active .item:nth-child(1) {
+    transform: translateX(-65px);
+}
+.wrapper.active .item:nth-child(2) {
+    transform: translateY(-65px);
+}
+.wrapper.active .item:nth-child(3) {
+    transform: translateX(65px);
+}
+.link:hover {
+    color: #fff;
+    transition: background-color .5s;
+}
+.ig:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+}
+.tw:hover {
+    background-color: #1DA1F2;
+}
+.sc:hover {
+    background-color: #FFFC00;
+    color: inherit;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share button micro interaction</title>
+
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <button class="btn">
+          <i class="ri-share-line"></i>
+        </button>
+        <ul class="list">
+          <li class="item">
+            <a href="#" class="link ig">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </li>
+          <li class="item" style="--d: .25s;">
+            <a href="#" class="link tw">
+              <i class="ri-twitter-line"></i>
+            </a>
+          </li>
+          <li class="item" style="--d: .5s;">
+            <a href="#" class="link sc">
+              <i class="ri-snapchat-line"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        const btnEl = document.querySelector('.btn');
+    
+        const toggleOptions = () => {
+          const wrapperEl = document.querySelector('.wrapper');
+          const iconEl = btnEl.querySelector('i');
+    
+          wrapperEl.classList.toggle('active');
+    
+          if (iconEl.classList.contains('ri-share-line')) {
+            iconEl.classList.replace('ri-share-line', 'ri-close-line');
+          } else {
+            iconEl.classList.replace('ri-close-line', 'ri-share-line');
+          }
+        };
+    
+        btnEl.addEventListener('click', toggleOptions);
+      </script>
+</body>
+<div class="footer-template">
+    <footer class="footer">
+        <p>23-08-2022 / <a href="https://arnault-guillaume.vercel.app/">my profil</a> / credit : ig - @juliocodes</p>
+    </footer>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,100&display=swap');
+        .footer {
+            font-family: 'IBM Plex Mono', monospace;
+            font-style: italic;
+            font-size: 12px;
+            position: fixed;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</div>
+</html>

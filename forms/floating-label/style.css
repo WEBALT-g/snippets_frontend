@@ -6,7 +6,7 @@
 
 body {
     background: #01161e;
-    height: 600px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
